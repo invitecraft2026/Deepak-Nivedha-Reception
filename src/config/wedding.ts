@@ -28,7 +28,7 @@ export const wedding = {
     parents: "",
   },
 
-  initials: "D & N",
+  initials: "N & D",
 
   /** Human readable date + time */
   date: "Sunday, 29 November 2026",
