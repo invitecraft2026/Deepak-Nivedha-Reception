@@ -88,7 +88,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "author", content: `${wedding.groom.firstName} & ${wedding.bride.firstName}` },
       { property: "og:title", content: siteTitle },
       { property: "og:description", content: siteDescription },
-      { property: "og:image", content: "https://your-domain.com/preview.jpg" },
+      { property: "og:image", content: "https://deepak-nivedha-reception.invitecraft2026.workers.dev/coupleImages/image-4.jpg" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: siteTitle },
