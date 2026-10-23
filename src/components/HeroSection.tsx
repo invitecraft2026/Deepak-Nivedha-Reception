@@ -60,17 +60,18 @@ export function HeroSection({ start }: { start: boolean }) {
           <div className="mt-3 flex flex-col items-center">
             {/* Bride - deep burgundy */}
             <h2 className="font-script text-5xl leading-none text-[#4d1f29] drop-shadow-[0_0_10px_rgba(251,245,230,0.9)] sm:text-6xl">
-              {wedding.bride.firstName}
+              
+               {wedding.groom.firstName}
             </h2>
 
             {/* Ampersand - antique gold */}
             <span className="font-script -my-1 text-xl text-[#8a6a1c] drop-shadow-[0_0_8px_rgba(251,245,230,0.9)] sm:text-2xl">
               &amp;
             </span>
-
+            
             {/* Groom - deep burgundy */}
             <h2 className="font-script text-5xl leading-none text-[#4d1f29] drop-shadow-[0_0_10px_rgba(251,245,230,0.9)] sm:text-6xl">
-              {wedding.groom.firstName}
+              {wedding.bride.firstName}
             </h2>
           </div>
         </motion.div>

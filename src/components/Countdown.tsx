@@ -38,7 +38,7 @@ export function Countdown() {
         <Reveal>
           <SectionHeading
             eyebrow="Counting the moments"
-            title="The Celebration Begins In"
+            title="The Reception Begins In"
           />
         </Reveal>
 

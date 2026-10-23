@@ -11,6 +11,7 @@ import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
 import { reportLovableError } from "../lib/lovable-error-reporting";
+import { wedding } from "@/config/wedding";
 
 function NotFoundComponent() {
   return (
@@ -72,19 +73,26 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const siteTitle = `${wedding.groom.firstName} & ${wedding.bride.firstName} — Wedding Reception Invitation`;
+ 
+const siteDescription = `You are warmly invited to the wedding reception of ${wedding.groom.firstName} & ${wedding.bride.firstName} on ${wedding.date}, ${wedding.time}, at ${wedding.venue.name}, Porur, Chennai.`;
+
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: siteTitle },
+      { name: "description", content: siteDescription },
+      { name: "author", content: `${wedding.groom.firstName} & ${wedding.bride.firstName}` },
+      { property: "og:title", content: siteTitle },
+      { property: "og:description", content: siteDescription },
+      { property: "og:image", content: "https://your-domain.com/preview.jpg" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: siteTitle },
+      { name: "twitter:description", content: siteDescription },
     ],
     links: [
       {
@@ -99,13 +107,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       },
       { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
     ],
-
   }),
   shellComponent: RootShell,
   component: RootComponent,
   notFoundComponent: NotFoundComponent,
   errorComponent: ErrorComponent,
 });
+ 
 
 function RootShell({ children }: { children: ReactNode }) {
   return (

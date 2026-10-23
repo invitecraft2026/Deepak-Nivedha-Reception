@@ -1,12 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 
-import { DressCode } from "@/components/DressCode";
+// import { DressCode } from "@/components/DressCode";
 import { EnvelopeIntro } from "@/components/EnvelopeIntro";
 import { EventTimeline } from "@/components/EventTimeline";
 import { Footer } from "@/components/Footer";
 import { GlobalVideoBackground } from "@/components/GlobalVideoBackground";
-import { GuestInfo } from "@/components/GuestInfo";
+// import { GuestInfo } from "@/components/GuestInfo";
+import { Gallery } from "@/components/Gallery";
 import { HeroSection } from "@/components/HeroSection";
 import { InvitationMessage } from "@/components/InvitationMessage";
 import { MusicControl } from "@/components/MusicControl";
@@ -116,17 +117,19 @@ function Index() {
           <EventTimeline />
 
           <SaveTheDate />
+           <Gallery />
 
           <VenueSection />
 
-          <DressCode />
+          {/* <DressCode /> */}
+          
 
           {/* <GuestInfo /> */}
 
           <Footer />
         </div>
 
-        {introDone && <MusicControl />}
+       <MusicControl start={introDone} />
       </main>
     </>
   );

@@ -29,7 +29,7 @@ export function InvitationMessage() {
         <Reveal delay={0.1}>
           {/* Bride name - deep burgundy */}
           <h3 className="font-script mt-6 text-5xl text-[#4d1f29] drop-shadow-[0_0_10px_rgba(251,245,230,0.9)] sm:text-6xl">
-            {wedding.bride.firstName}
+            {wedding.groom.firstName}
           </h3>
 
           {/* Parents */}
@@ -48,7 +48,8 @@ export function InvitationMessage() {
         <Reveal delay={0.2}>
           {/* Groom name - deep burgundy */}
           <h3 className="font-script mt-3 text-5xl text-[#4d1f29] drop-shadow-[0_0_10px_rgba(251,245,230,0.9)] sm:text-6xl">
-            {wedding.groom.firstName}
+            
+            {wedding.bride.firstName}
           </h3>
 
           {/* Parents */}
